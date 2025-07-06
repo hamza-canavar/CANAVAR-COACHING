@@ -32,9 +32,6 @@ import hamzaCanavar from './assets/hamza-canavar.jpg'
 import recipeBookCover from './assets/recipe-book-cover.png'
 import './App.css'
 
-// تحميل مكونات بشكل تدريجي لتحسين الأداء
-const ErrorBoundary = lazy(() => import('./components/ErrorBoundary.jsx'))
-
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -644,6 +641,24 @@ function App() {
                 </div>
                 <span className="text-sm text-muted-foreground group-hover:text-primary">@canavar_hamza</span>
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-foreground text-background py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center space-x-4 mb-4 md:mb-0">
+              <img src={logo} alt="CANAVAR COACHING" className="h-8 w-auto filter invert" />
+              <div>
+                <h3 className="font-bold">CANAVAR COACHING</h3>
+                <p className="text-sm opacity-80">Science Based Coaching</p>
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <p className="text-sm opacity-80">© 2024 CANAVAR COACHING. جميع الحقوق محفوظة.</p>
             </div>
           </div>
         </div>
