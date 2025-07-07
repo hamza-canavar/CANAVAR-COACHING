@@ -51,7 +51,7 @@ function App() {
     setIsLoading(true)
     
     try {
-      const defaultMessage = "مرحباً، أرغب في التواصل معكم"
+      const defaultMessage = "Online Coaching"
       let message = customMessage || defaultMessage
       
       // إضافة كود الخصم إلى الرسالة إذا كان موجوداً
@@ -166,24 +166,24 @@ function App() {
     }>
       <div className="min-h-screen bg-background">
         {/* Header */}
-        <header className="fixed top-0 w-full bg-secondary/95 backdrop-blur-sm border-b border-primary z-50 shadow-sm">
+        <header className="fixed top-0 w-full bg-secondary/95 backdrop-blur-sm border-b-2 border-primary z-50 shadow-xl">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <LazyImage src={logo} alt="CANAVAR COACHING" className="h-12 w-auto" />
                 <div className="hidden md:block">
-                  <h1 className="text-xl font-bold text-foreground">CANAVAR COACHING</h1>
-                  <p className="text-sm text-primary">Science Based Coaching</p>
+                  <h1 className="text-xl font-black text-foreground tracking-wide">CANAVAR COACHING</h1>
+                  <p className="text-sm text-primary font-bold">Science Based Coaching</p>
                 </div>
               </div>
               
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-8">
-                <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors duration-200">الرئيسية</button>
-                <button onClick={() => scrollToSection('packages')} className="text-foreground hover:text-primary transition-colors duration-200">الباقات</button>
-                <button onClick={() => scrollToSection('book')} className="text-foreground hover:text-primary transition-colors duration-200">كتاب الوصفات</button>
-                <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors duration-200">عني</button>
-                <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors duration-200">تواصل معنا</button>
+                <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">الرئيسية</button>
+                <button onClick={() => scrollToSection('packages')} className="text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">الباقات</button>
+                <button onClick={() => scrollToSection('book')} className="text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">كتاب الوصفات</button>
+                <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">عني</button>
+                <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">تواصل معنا</button>
               </nav>
 
               {/* Mobile Menu Button */}
@@ -198,13 +198,13 @@ function App() {
 
             {/* Mobile Navigation */}
             {isMenuOpen && (
-              <nav className="md:hidden mt-4 pb-4 border-t border-primary pt-4 animate-in slide-in-from-top duration-200">
+              <nav className="md:hidden mt-4 pb-4 border-t-2 border-primary pt-4 animate-in slide-in-from-top duration-200">
                 <div className="flex flex-col space-y-4">
-                  <button onClick={() => scrollToSection('home')} className="text-right text-foreground hover:text-primary transition-colors duration-200">الرئيسية</button>
-                  <button onClick={() => scrollToSection('packages')} className="text-right text-foreground hover:text-primary transition-colors duration-200">الباقات</button>
-                  <button onClick={() => scrollToSection('book')} className="text-right text-foreground hover:text-primary transition-colors duration-200">كتاب الوصفات</button>
-                  <button onClick={() => scrollToSection('about')} className="text-right text-foreground hover:text-primary transition-colors duration-200">عني</button>
-                  <button onClick={() => scrollToSection('contact')} className="text-right text-foreground hover:text-primary transition-colors duration-200">تواصل معنا</button>
+                  <button onClick={() => scrollToSection('home')} className="text-right text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">الرئيسية</button>
+                  <button onClick={() => scrollToSection('packages')} className="text-right text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">الباقات</button>
+                  <button onClick={() => scrollToSection('book')} className="text-right text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">كتاب الوصفات</button>
+                  <button onClick={() => scrollToSection('about')} className="text-right text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">عني</button>
+                  <button onClick={() => scrollToSection('contact')} className="text-right text-foreground hover:text-primary transition-colors duration-200 font-bold text-lg">تواصل معنا</button>
                 </div>
               </nav>
             )}
@@ -214,32 +214,32 @@ function App() {
         {/* Hero Section */}
       <section id="home" className="pt-24 pb-16 relative overflow-hidden bg-background">
         <div className="absolute inset-0 z-0">
-          <img src={heroBg} alt="Training Background" className="w-full h-full object-cover opacity-10" />
-          <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 to-primary/20"></div>
+          <img src={heroBg} alt="Training Background" className="w-full h-full object-cover opacity-5" />
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 to-primary/30"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="lg:w-1/2 text-center lg:text-right mb-8 lg:mb-0">
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="text-5xl lg:text-7xl font-black text-foreground mb-6 tracking-wider">
                 CANAVAR COACHING
               </h1>
-              <h2 className="text-2xl lg:text-3xl text-primary mb-6">
+              <h2 className="text-3xl lg:text-4xl text-primary mb-6 font-black">
                 Science Based Coaching
               </h2>
-              <p className="text-lg text-muted mb-8 max-w-2xl">
+              <p className="text-xl text-muted mb-8 max-w-2xl font-bold leading-relaxed">
                 نقدم لك التدريب العلمي المبني على أحدث الأبحاث والدراسات العلمية لتحقيق أهدافك في اللياقة البدنية والتغذية بطريقة صحية ومستدامة
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" onClick={() => scrollToSection('packages')} className="text-lg px-8 py-3 bg-primary hover:bg-primary/80 text-foreground">
+                <Button size="lg" onClick={() => scrollToSection('packages')} className="text-xl px-10 py-4 bg-primary hover:bg-primary/80 text-foreground font-black border-2 border-primary">
                   اكتشف باقاتنا
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => scrollToSection('contact')} className="text-lg px-8 py-3 border-primary text-primary hover:bg-primary hover:text-foreground">
+                <Button variant="outline" size="lg" onClick={() => scrollToSection('contact')} className="text-xl px-10 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-foreground font-black">
                   تواصل معنا
                 </Button>
               </div>
             </div>
             <div className="lg:w-1/2 flex justify-center">
-              <img src={logo} alt="CANAVAR COACHING" className="w-64 h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl" />
+              <img src={logo} alt="CANAVAR COACHING" className="w-72 h-72 lg:w-96 lg:h-96 object-contain drop-shadow-2xl" />
             </div>
           </div>
         </div>
@@ -257,26 +257,23 @@ function App() {
           
           {/* Discount Code Section */}
           <div className="max-w-md mx-auto mb-12">
-            <div className="bg-card border border-primary rounded-xl p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-foreground mb-4 text-center">أكواد الخصم</h3>
+            <div className="bg-card border-2 border-primary rounded-xl p-6 shadow-xl">
+              <h3 className="text-xl font-black text-foreground mb-4 text-center">أكواد الخصم</h3>
               <div className="flex gap-3">
                 <input
                   type="text"
-                  placeholder="أدخل كود الخصم (مثال: CODE10)"
+                  placeholder="أدخل كود الخصم"
                   value={discountCode}
                   onChange={(e) => setDiscountCode(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-primary rounded-lg bg-background text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="flex-1 px-4 py-3 border-2 border-primary rounded-lg bg-background text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary font-bold"
                 />
                 <button
                   onClick={() => setDiscountCode('')}
-                  className="px-4 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/80 transition-colors"
+                  className="px-4 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/80 transition-colors font-bold"
                 >
                   مسح
                 </button>
               </div>
-              <p className="text-sm text-muted mt-2 text-center">
-                أدخل كود ينتهي بـ 10 أو 20 أو 30 للحصول على خصم
-              </p>
             </div>
           </div>
           

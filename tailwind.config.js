@@ -7,24 +7,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#E50914", // أحمر الشعار
-        secondary: "#1A1A1A", // أسود الشعار
-        accent: "#FFFFFF", // أبيض الشعار
+        primary: {
+          DEFAULT: "#DC2626", // أحمر الشعار
+          foreground: "#FFFFFF", // أبيض
+        },
+        secondary: {
+          DEFAULT: "#1A1A1A", // أسود الشعار
+          foreground: "#FFFFFF", // أبيض
+        },
         background: "#0A0A0A", // خلفية داكنة جداً
         foreground: "#FFFFFF", // نص أبيض
         muted: "#A0A0A0", // نص رمادي فاتح
-        border: "#333333", // حدود رمادية داكنة
-        card: "#1C1C1C", // خلفية البطاقات
-        "card-foreground": "#FFFFFF", // نص البطاقات
+        card: "#1A1A1A", // خلفية البطاقات
+        border: "#333333", // حدود
       },
       fontFamily: {
-        sans: ["Arial", "sans-serif"], // خط حاد وعصري
+        sans: ["Impact", "Arial Black", "sans-serif"], // خط حاد وقوي
       },
-      boxShadow: {
-        "3xl": "0 35px 60px -15px rgba(255, 0, 0, 0.3)",
-      }
     },
   },
   plugins: [],
-}
+};
 
