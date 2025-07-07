@@ -8,24 +8,32 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#DC2626", // أحمر الشعار
-          foreground: "#FFFFFF", // أبيض
+          DEFAULT: "#E01F26", // أحمر الشعار الرئيسي
+          foreground: "#FFFFFF", // نص أبيض على الأحمر
         },
         secondary: {
-          DEFAULT: "#1A1A1A", // أسود الشعار
-          foreground: "#FFFFFF", // أبيض
+          DEFAULT: "#1A1A1A", // أسود الشعار الرئيسي
+          foreground: "#FFFFFF", // نص أبيض على الأسود
         },
-        background: "#0A0A0A", // خلفية داكنة جداً
-        foreground: "#FFFFFF", // نص أبيض
-        muted: "#A0A0A0", // نص رمادي فاتح
-        card: "#1A1A1A", // خلفية البطاقات
-        border: "#333333", // حدود
+        background: "#0D0D0D", // خلفية داكنة جداً (قريب من الأسود في الشعار)
+        foreground: "#FFFFFF", // نص أبيض على الخلفية
+        muted: {
+          DEFAULT: "#A0A0A0", // رمادي فاتح للنصوص الثانوية (من الشعار)
+          foreground: "#1A1A1A", // نص أسود على الرمادي
+        },
+        card: {
+          DEFAULT: "#2A2A2A", // لون بطاقات أغمق قليلاً من الخلفية
+          foreground: "#FFFFFF", // نص أبيض على البطاقات
+        },
+        border: "#E01F26", // حدود حمراء
+        input: "#E01F26", // حدود حقول الإدخال حمراء
+        ring: "#E01F26", // حلقات التركيز حمراء
       },
       fontFamily: {
-        sans: ["Impact", "Arial Black", "sans-serif"], // خط حاد وقوي
+        sans: ["Impact", "Arial Black", "sans-serif"], // خطوط حادة وقوية
       },
     },
   },
   plugins: [],
-};
+}
 
